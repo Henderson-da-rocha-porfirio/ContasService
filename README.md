@@ -1,7 +1,2 @@
-# @ComponentScan - usado no main.
-## Escaneia todos os beans dentro dos outros pacotes.
-````
-Ele scaneia o package controller onde fica definido o Rest Controller.
-* Enquanto a aplicação está subindo, ela está indo e checando todos os packages e identificando todas as anotações e
-* configurações que estão dentro desses, e baseados neles tentará criar os serviços REST.
-````
+# @EnableJpaRepositories - escaneia repository
+## Ao obter êxito na ação acima, ele precisa também interagir com o database. Por isso essa anotação é utilizada para que ela escaneie todas as classes/interfaces dentro do package repository.
