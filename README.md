@@ -1,24 +1,13 @@
-# H2 banco em memória
-### Acessando ao H2
-#### 1. Verificar no console o endpoint criado:
-````
-h2-console
-````
-#### 2. No navegador colocar o endpoint criado com a porta local cofigurado nas properties. Se não tiver sido configurada, ficará na 8080:
-````
-http://localhost:8080/h2-console/
-````
-#### 3. Quando abrir no console, colocar em JDBC URL, se der algum erro, o que saiu no console, por exemplo:
-````
- H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-````
-#### 4. Testando no Postman:
-````
-http://localhost:8080/myAccount
-````
-##### - se der um erro 415: Content type 'text/plain;charset=UTF-8' not supported], colocar no Headers:
-````
-1. KEY: Content-Type
-2. VALUE: application/json
-````
-#### 5. A beleza dos Microservices: Não há nada acoplado da regra de negócio com os microserviços cartões ou empréstimos.
+# POJO - Java Bean
+### 1. A framework JPA tratará a classe como um POJO.
+### 2. POJO Plain Old Java Object ou POJO, são objetos Java que seguem um desenho extremamente simplificado.
+### 3. Um POJO é um JavaBean que segue definições rígidas de estrutura, sendo elas:
+#### a. Possui um construtor default (padrão - sem argumentos) ou não declarar construtor (
+assim o compilador Java criara um construtor default automaticamente);
+#### b. Possui todos os seus atributos, sejam eles tipos primitivos ou objetos, com a visibilidade privada;
+#### c. Não possui métodos específicos, exceto aqueles que seguem o padrão de getter e setter para
+seus respectivos atributos.
+#### d. O padrão getter é a forma de pegar o valor do atributo.
+#### e. O padrão setter é a forma de alterar o valor do atributo.
+### 4. É mais atrativo do que o termo bean do Java devido à confusão gerada pela semelhança
+dos termos JavaBeans e dos EJB (Enterprise JavaBeans).
